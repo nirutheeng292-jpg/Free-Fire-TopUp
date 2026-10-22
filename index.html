@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ne">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10111b">
+  <title>FF Diamond Top-Up Nepal</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="gem">◆</span><div><b>DIAMOND HUB</b><small>FREE FIRE TOP-UP • NEPAL</small></div></div>
+    <span class="secure">● Secure checkout demo</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FAST • SIMPLE • RELIABLE</p>
+        <h1>Top-up your<br><span>Diamonds</span></h1>
+        <p class="muted">Player ID राख्नुहोस्, package छान्नुहोस् र payment सुरु गर्नुहोस्।</p>
+      </div>
+      <div class="hero-gem" aria-hidden="true">💎</div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><span class="step">01</span><div><h2>Player details</h2><p>तपाईंको Free Fire Player UID</p></div></div>
+      <label for="playerId">Player UID</label>
+      <input id="playerId" inputmode="numeric" autocomplete="off" placeholder="उदाहरण: 1234567890" maxlength="20">
+      <p class="hint">UID सही छ कि छैन payment गर्नु अघि जाँच गर्नुहोस्। Password कहिल्यै नदिनुहोस्।</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><span class="step">02</span><div><h2>Choose diamonds</h2><p>Demo prices — launch गर्नु अघि आफ्नो वास्तविक मूल्य राख्नुहोस्</p></div></div>
+      <div class="packages" id="packages">
+        <button class="package selected" data-package="100" data-price="130"><span class="diamond">💎</span><b>100 Diamonds</b><strong>Rs. 130</strong><small>Starter pack</small></button>
+        <button class="package" data-package="310" data-price="390"><span class="diamond">💎</span><b>310 Diamonds</b><strong>Rs. 390</strong><small>Popular pack</small></button>
+        <button class="package" data-package="520" data-price="650"><span class="diamond">💎</span><b>520 Diamonds</b><strong>Rs. 650</strong><small>Value pack</small></button>
+        <button class="package" data-package="1060" data-price="1290"><span class="diamond">💎</span><b>1060 Diamonds</b><strong>Rs. 1,290</strong><small>Big pack</small></button>
+      </div>
+      <div class="selected-summary"><span>Selected package</span><b id="selectedSummary">100 Diamonds · Rs. 130</b></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><span class="step">03</span><div><h2>Payment method</h2><p>Checkout मा payment provider छान्नुहोस्</p></div></div>
+      <div class="payment-options">
+        <label class="pay-option"><input type="radio" name="payment" value="esewa" checked><span class="pay-logo esewa">eSewa</span><span><b>eSewa</b><small>Secure checkout</small></span></label>
+        <label class="pay-option"><input type="radio" name="payment" value="khalti"><span class="pay-logo khalti">K</span><span><b>Khalti</b><small>Secure checkout</small></span></label>
+      </div>
+      <button class="buy-button" id="buyButton">Continue to payment <span>→</span></button>
+      <p class="fineprint">Payment केवल official provider checkout बाट गर्नुहोस्। यो starter project हो; merchant credentials र server-side verification सेटअप नगरेसम्म live payment/top-up चल्दैन।</p>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+    </section>
+    <section class="notice"><b>Before going live</b><p>यो template मा वास्तविक eSewa/Khalti credentials समावेश छैनन्। Provider का official merchant APIs, callback verification र authorized game top-up API जोडेर मात्र live launch गर्नुहोस्।</p></section>
+  </main>
+  <footer>© <span id="year"></span> Diamond Hub Nepal · Unofficial independent top-up storefront</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
