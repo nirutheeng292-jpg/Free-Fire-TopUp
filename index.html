@@ -6,7 +6,52 @@
   <meta name="theme-color" content="#10111b">
   <title>FF Diamond Top-Up Nepal</title>
   <link rel="stylesheet" href="/style.css">
-</head>
+</head> 
+  <div id="esewaQrModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000c;
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+">
+  <div style="
+    background:white;
+    color:#222;
+    padding:20px;
+    border-radius:16px;
+    text-align:center;
+    max-width:340px;
+    width:100%;
+  ">
+    <h2>Pay with eSewa</h2>
+
+    <img
+      src="esewa-qr.jpg"
+      alt="eSewa QR Code"
+      style="width:100%;max-width:260px;"
+    >
+
+    <p>Scan the QR using eSewa.</p>
+
+    <button onclick="closeEsewaQR()">
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+function showEsewaQR() {
+  const modal = document.getElementById("esewaQrModal");
+  modal.style.display = "flex";
+}
+
+function closeEsewaQR() {
+  document.getElementById("esewaQrModal").style.display = "none";
+}
+</script>
 <body>
   <header class="topbar">
     <div class="brand"><span class="gem">◆</span><div><b>DIAMOND HUB</b><small>FREE FIRE TOP-UP • NEPAL</small></div></div>
